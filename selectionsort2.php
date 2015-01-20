@@ -4,12 +4,12 @@
 <?php
 $numArray = array();
 
-for ($i = 0; $i < 100; $i++) {
+for ($i = 0; $i < 10000; $i++) {
 	$numArray[] = rand(0,10000);
 }
 
-echo "<h1> Initial Array</h1>";
-var_dump ($numArray);
+//echo "<h1> Initial Array</h1>";
+//var_dump ($numArray);
 
 $start = microtime(true);
 
@@ -50,9 +50,9 @@ for ($unsorted = 0; $unsorted < count($numArray)/2; $unsorted++) {
 }
 
 $elapsedTime = microtime(true) - $start;
-echo "time: " . $elapsedTime;
-echo "<h1> Sorted Array</h1>";
-var_dump ($numArray);
+echo "time to sort 10,000 elements: " . $elapsedTime;
+//echo "<h1> Sorted Array</h1>";
+//var_dump ($numArray);
 
 ?>
 </body>
